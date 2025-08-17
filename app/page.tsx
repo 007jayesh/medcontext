@@ -18,9 +18,9 @@ export default function ExperimentPage() {
       <div className="relative z-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4">
         <div className="flex items-center justify-center space-x-2 text-sm">
           <span className="hidden sm:inline">🚀</span>
-          <span className="font-medium">Under Development</span>
+          <span className="font-medium">Live Deployment</span>
           <span className="hidden sm:inline">•</span>
-          <span className="text-blue-100">Demo deployment for testing purposes</span>
+          <span className="text-blue-100">Medical AI Platform Ready</span>
         </div>
       </div>
 
@@ -31,7 +31,7 @@ export default function ExperimentPage() {
       <header className="relative z-10 animate-fade-in-up">
         <nav className="container mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
-            <div className="font-medium text-xl">Parsr</div>
+            <div className="font-medium text-xl">Med Context</div>
             <div className="hidden md:flex space-x-8 text-sm">
               <Link href="#features" className="hover:text-gray-600 transition-colors">Features</Link>
               <Link href="#solutions" className="hover:text-gray-600 transition-colors">Solutions</Link>
@@ -60,7 +60,7 @@ export default function ExperimentPage() {
           <div className="space-y-8">
             <div className="animate-fade-in-up" style={{animationDelay: '0.4s'}}>
               <h1 className="font-medium text-4xl md:text-5xl mb-6 leading-tight tracking-tight">
-                Transform Your Document Processing with{' '}
+                Fine-Tuned Medical AI with{' '}
                 <span className="text-indigo-600 font-bold text-5xl md:text-6xl" style={{
                   border: 'none', 
                   outline: 'none', 
@@ -69,35 +69,26 @@ export default function ExperimentPage() {
                   animation: 'parsrFloat 1.5s ease-in-out infinite',
                   transform: 'translateY(0px)'
                 }}>
-                  Parsr
+                  Advanced
                 </span>
                 <br />
                 <span className="text-gray-800">
-                  AI Intelligence
+                  RAG Architecture
                 </span>
               </h1>
             </div>
             <div className="animate-fade-in-up" style={{animationDelay: '0.6s'}}>
               <p className="text-lg text-gray-600 mb-10">
-                Unlock insights from your document repositories through advanced AI pipelines, intelligent agents, and conversational AI. Create custom AI agents for automated processing tailored to your specific needs. Built for financial services and enterprise teams.
+                Build specialized medical AI using advanced foundation models with fine-tuning on your expert knowledge base. Our platform combines RAG architecture with context engineering to create clinically-accurate AI assistants for health-tech applications.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-              <Button 
-                className="btn-primary bg-gradient-primary text-white px-8 py-3 rounded-full text-sm font-medium hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-                asChild
-              >
-                <Link href="/signup">
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </Button>
               <Button 
                 variant="outline"
                 className="btn-secondary border-2 border-indigo-200 px-8 py-3 rounded-full text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
                 asChild
               >
-                <Link href="#features">Learn More</Link>
+                <Link href="#contact">Contact Sales</Link>
               </Button>
             </div>
           </div>
@@ -122,8 +113,8 @@ export default function ExperimentPage() {
                         <div className="w-16 h-20 bg-white border-2 border-dashed border-indigo-300 rounded-lg flex items-center justify-center mb-4 animate-document-drop">
                           <FileText className="w-8 h-8 text-indigo-500" />
                         </div>
-                        <p className="text-sm font-medium text-gray-700">mortgage_application.pdf</p>
-                        <p className="text-xs text-gray-500 mt-1">Uploading to Parsr...</p>
+                        <p className="text-sm font-medium text-gray-700">patient_medical_record.pdf</p>
+                        <p className="text-xs text-gray-500 mt-1">Uploading to Med Context...</p>
                         <div className="w-32 h-1 bg-gray-200 rounded-full mt-2 mx-auto">
                           <div className="h-full bg-indigo-500 rounded-full animate-upload-progress"></div>
                         </div>
@@ -144,8 +135,8 @@ export default function ExperimentPage() {
                         <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 animate-pipeline-fetch">
                           <Database className="w-8 h-8 text-white animate-spin-slow" />
                         </div>
-                        <p className="text-sm font-medium text-gray-700">Fetching related docs</p>
-                        <p className="text-xs text-gray-500 mt-1">Pipeline processing...</p>
+                        <p className="text-sm font-medium text-gray-700">Fetching medical data</p>
+                        <p className="text-xs text-gray-500 mt-1">RAG processing...</p>
                         <div className="w-32 h-1 bg-gray-200 rounded-full mt-2 mx-auto">
                           <div className="h-full bg-purple-500 rounded-full animate-fetch-progress"></div>
                         </div>
@@ -161,19 +152,19 @@ export default function ExperimentPage() {
                       <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4 animate-ai-process">
                         <Bot className="w-8 h-8 text-white animate-spin-slow" />
                       </div>
-                      <p className="text-sm font-medium text-gray-700">AI Extracting Data...</p>
+                      <p className="text-sm font-medium text-gray-700">AI Extracting Medical Data...</p>
                       <div className="mt-3 space-y-1">
                         <div className="flex items-center justify-center space-x-2 text-xs">
                           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                          <span className="text-gray-600">Borrower: John Smith</span>
+                          <span className="text-gray-600">Patient: Sarah Johnson</span>
                         </div>
                         <div className="flex items-center justify-center space-x-2 text-xs animate-data-extract" style={{animationDelay: '0.5s'}}>
                           <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                          <span className="text-gray-600">Income: $85,000</span>
+                          <span className="text-gray-600">Diagnosis: Type 2 Diabetes</span>
                         </div>
                         <div className="flex items-center justify-center space-x-2 text-xs animate-data-extract" style={{animationDelay: '1s'}}>
                           <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                          <span className="text-gray-600">Loan Amount: $420,000</span>
+                          <span className="text-gray-600">HbA1c: 7.2%</span>
                         </div>
                       </div>
                     </div>
@@ -187,14 +178,14 @@ export default function ExperimentPage() {
                       <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mb-4 animate-database-store">
                         <Database className="w-8 h-8 text-white" />
                       </div>
-                      <p className="text-sm font-medium text-gray-700">Storing Structured Data</p>
+                      <p className="text-sm font-medium text-gray-700">Storing Medical Data</p>
                       <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
                         <div className="bg-white/60 backdrop-blur rounded p-2 animate-data-card" style={{animationDelay: '0.2s'}}>
-                          <div className="font-medium text-gray-700">Personal Info</div>
+                          <div className="font-medium text-gray-700">Patient Info</div>
                           <div className="text-gray-500">✓ Stored</div>
                         </div>
                         <div className="bg-white/60 backdrop-blur rounded p-2 animate-data-card" style={{animationDelay: '0.4s'}}>
-                          <div className="font-medium text-gray-700">Financial Data</div>
+                          <div className="font-medium text-gray-700">Clinical Data</div>
                           <div className="text-gray-500">✓ Stored</div>
                         </div>
                       </div>
@@ -211,8 +202,8 @@ export default function ExperimentPage() {
                         <Bot className="w-4 h-4 text-white" />
                       </div>
                       <div>
-                        <div className="text-sm font-medium text-gray-800">Parsr AI Assistant</div>
-                        <div className="text-xs text-gray-500">Ready to answer questions</div>
+                        <div className="text-sm font-medium text-gray-800">Med Context Health Assistant</div>
+                        <div className="text-xs text-gray-500">Fine-tuned • RAG-enabled • Live knowledge</div>
                       </div>
                     </div>
                     
@@ -223,17 +214,17 @@ export default function ExperimentPage() {
                           <Bot className="w-3 h-3 text-white" />
                         </div>
                         <div className="bg-gray-100 rounded-lg px-3 py-2 text-sm">
-                          I've processed your mortgage application. What would you like to know?
+                          Hello! I'm trained on expert medical knowledge and can provide evidence-based health guidance. What would you like to know?
                         </div>
                       </div>
                       
                       {/* User typing animation */}
                       <div className="flex items-start justify-end space-x-2 animate-user-message" style={{animationDelay: '2.5s'}}>
                         <div className="bg-indigo-500 text-white rounded-lg px-3 py-2 text-sm">
-                          What's the debt-to-income ratio?
+                          My patient has Type 2 diabetes and high blood pressure. What lifestyle interventions should I recommend?
                         </div>
                         <div className="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center">
-                          <span className="text-xs text-gray-600">JS</span>
+                          <span className="text-xs text-gray-600">Dr</span>
                         </div>
                       </div>
                       
@@ -243,8 +234,10 @@ export default function ExperimentPage() {
                           <Bot className="w-3 h-3 text-white" />
                         </div>
                         <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg px-3 py-2 text-sm">
-                          <div className="font-medium text-green-800">Debt-to-Income Ratio: 28%</div>
-                          <div className="text-green-700 text-xs mt-1">✓ Meets lending criteria (below 36% threshold)</div>
+                          <div className="font-medium text-green-800">Evidence-based recommendations:</div>
+                          <div className="text-green-700 text-xs mt-1">• Mediterranean diet (reduces HbA1c by 0.3-0.5%)</div>
+                          <div className="text-green-700 text-xs">• 150min/week moderate exercise (improves insulin sensitivity)</div>
+                          <div className="text-green-700 text-xs">• DASH diet for BP control (10-15mmHg reduction)</div>
                         </div>
                       </div>
                     </div>
@@ -253,7 +246,7 @@ export default function ExperimentPage() {
                     <div className="p-3 border-t bg-gray-50">
                       <div className="flex items-center space-x-2">
                         <div className="flex-1 bg-white rounded-full px-3 py-1 text-sm text-gray-500 border">
-                          Ask me anything about this document...
+                          Ask about treatments, dosages, interactions, guidelines...
                         </div>
                         <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center">
                           <ArrowRight className="w-4 h-4 text-white" />
@@ -282,17 +275,17 @@ export default function ExperimentPage() {
                       <div className="animate-agent-step-1" style={{animationDelay: '1s'}}>
                         <div className="bg-white/70 backdrop-blur rounded-lg p-3">
                           <div className="text-xs font-medium text-gray-700 mb-1">Step 1: Agent Configuration</div>
-                          <div className="text-xs text-gray-600">Name: Mortgage Credit Scorer</div>
-                          <div className="text-xs text-gray-600">Database: Mortgage Applications DB</div>
+                          <div className="text-xs text-gray-600">Name: Clinical Diagnosis Assistant</div>
+                          <div className="text-xs text-gray-600">Database: Medical Knowledge Base</div>
                         </div>
                       </div>
                       
                       <div className="animate-agent-step-2" style={{animationDelay: '2.5s'}}>
                         <div className="bg-white/70 backdrop-blur rounded-lg p-3">
                           <div className="text-xs font-medium text-gray-700 mb-1">Step 2: Objective Definition</div>
-                          <div className="text-xs text-gray-600">✓ Extract borrower information</div>
-                          <div className="text-xs text-gray-600">✓ Calculate debt-to-income ratio</div>
-                          <div className="text-xs text-gray-600">✓ Generate credit score</div>
+                          <div className="text-xs text-gray-600">✓ Analyze patient symptoms</div>
+                          <div className="text-xs text-gray-600">✓ Suggest differential diagnoses</div>
+                          <div className="text-xs text-gray-600">✓ Recommend treatment options</div>
                         </div>
                       </div>
                       
@@ -302,7 +295,7 @@ export default function ExperimentPage() {
                             <CheckCircle className="w-3 h-3 text-emerald-600 mr-1" />
                             <div className="text-xs font-medium text-emerald-800">Agent Created Successfully!</div>
                           </div>
-                          <div className="text-xs text-emerald-700">Ready to process mortgage applications</div>
+                          <div className="text-xs text-emerald-700">Ready to assist with clinical diagnoses</div>
                         </div>
                       </div>
                     </div>
@@ -331,11 +324,11 @@ export default function ExperimentPage() {
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-purple-500 rounded-full shadow-lg animate-progress-dot-pipeline border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">Pipeline</span>
+                  <span className="text-xs text-gray-600 font-medium">RAG</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-gray-300 rounded-full shadow-lg animate-progress-dot-2 border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">Process</span>
+                  <span className="text-xs text-gray-600 font-medium">Extract</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-gray-300 rounded-full shadow-lg animate-progress-dot-3 border border-white/30"></div>
@@ -361,27 +354,27 @@ export default function ExperimentPage() {
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center mr-3">
                 <Zap className="w-4 h-4 text-white" />
               </div>
-              <h3 className="font-medium text-lg mb-2">AI-Powered Extraction</h3>
+              <h3 className="font-medium text-lg mb-2">Medical AI Fine-Tuning</h3>
             </div>
-            <p className="text-gray-600 text-sm">Advanced AI pipelines with quality assurance ensure perfect data extraction from any document format.</p>
+            <p className="text-gray-600 text-sm">Fine-tune specialized medical foundation models using your expert knowledge base for clinical accuracy.</p>
           </div>
           <div className="gradient-border pt-6 card-hover animate-fade-in-up" style={{animationDelay: '7.2s'}}>
             <div className="flex items-center mb-3">
               <div className="w-8 h-8 bg-gradient-accent rounded-lg flex items-center justify-center mr-3">
                 <BarChart3 className="w-4 h-4 text-white" />
               </div>
-              <h3 className="font-medium text-lg mb-2">Enterprise Scale</h3>
+              <h3 className="font-medium text-lg mb-2">RAG Architecture</h3>
             </div>
-            <p className="text-gray-600 text-sm">Bulk processing pipelines handle thousands of documents with structured storage and retrieval capabilities.</p>
+            <p className="text-gray-600 text-sm">Combine fine-tuned models with retrieval-augmented generation for up-to-date medical knowledge access.</p>
           </div>
           <div className="gradient-border pt-6 card-hover animate-fade-in-right" style={{animationDelay: '7.4s'}}>
             <div className="flex items-center mb-3">
               <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center mr-3">
                 <MessageSquare className="w-4 h-4 text-white" />
               </div>
-              <h3 className="font-medium text-lg mb-2">Conversational AI</h3>
+              <h3 className="font-medium text-lg mb-2">Context Engineering</h3>
             </div>
-            <p className="text-gray-600 text-sm">Chat with your extracted data using natural language queries and get instant insights.</p>
+            <p className="text-gray-600 text-sm">Next-generation prompt engineering with advanced context optimization to ensure accurate, relevant medical responses.</p>
           </div>
         </div>
       </main>
@@ -396,19 +389,19 @@ export default function ExperimentPage() {
       <section id="solutions" className="relative z-10 py-16 px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="font-medium text-3xl md:text-4xl mb-4">Built for Financial Services</h2>
+            <h2 className="font-medium text-3xl md:text-4xl mb-4">Built for Health-Tech Innovation</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Specialized solutions for the unique document processing needs of financial institutions and professional services.
+              Specialized AI training solutions for health-tech startups and medical applications requiring expert-level accuracy.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Mortgage Brokers", desc: "Streamline loan applications and compliance documentation", icon: FileText },
-              { title: "Financial Advisors", desc: "Process client documents and generate reports efficiently", icon: BarChart3 },
-              { title: "Accounting Firms", desc: "Automate tax document processing and client communications", icon: Users },
-              { title: "Insurance Companies", desc: "Handle claims processing and policy documentation", icon: Shield },
-              { title: "Legal Firms", desc: "Analyze contracts and legal documents with precision", icon: FileText },
-              { title: "Healthcare", desc: "Process insurance claims and medical documentation", icon: Users },
+              { title: "Telemedicine Platforms", desc: "Train AI to provide expert-level health consultations and recommendations", icon: MessageSquare },
+              { title: "Health Advisory Apps", desc: "Create context-aware assistants for personalized health guidance", icon: BarChart3 },
+              { title: "Medical Chatbots", desc: "Deploy AI trained on expert responses for patient interactions", icon: Bot },
+              { title: "Wellness Coaching", desc: "Build AI coaches using validated expert knowledge and protocols", icon: TrendingUp },
+              { title: "Symptom Checkers", desc: "Develop accurate diagnostic tools using expert-trained models", icon: CheckCircle },
+              { title: "Mental Health Support", desc: "Create empathetic AI assistants trained on therapist responses", icon: Users },
             ].map((item, index) => {
               const IconComponent = item.icon;
               return (
@@ -445,10 +438,10 @@ export default function ExperimentPage() {
               <span className="text-sm font-medium text-indigo-700">Intelligent Automation</span>
             </div>
             <h2 className="font-medium text-4xl md:text-5xl mb-6 bg-gradient-to-r from-gray-800 via-indigo-700 to-purple-700 bg-clip-text text-transparent">
-              AI Agents for Financial Intelligence
+              AI Agents for Medical Intelligence
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Deploy specialized AI agents to automate complex financial workflows. Each agent is trained on domain-specific data to deliver precise, actionable insights with enterprise-grade reliability.
+              Deploy specialized AI agents to automate complex medical workflows. Each agent is trained on expert medical knowledge to deliver precise, clinically-accurate insights with healthcare-grade reliability.
             </p>
           </div>
           {/* Moving Agents Carousel */}
@@ -458,55 +451,55 @@ export default function ExperimentPage() {
               {[...Array(2)].map((_, duplicateIndex) => (
                 [
                   { 
-                    title: "Document Analyzer", 
-                    desc: "Extract and classify financial data with 99.8% accuracy",
+                    title: "Clinical Diagnosis Assistant", 
+                    desc: "Analyze symptoms and suggest potential diagnoses based on medical literature",
                     icon: FileText,
-                    features: ["Multi-format support", "Smart extraction"],
+                    features: ["Symptom analysis", "Differential diagnosis"],
                     status: "Active",
                     gradient: "from-blue-500 to-indigo-600",
                     bgGradient: "from-blue-50 to-indigo-50"
                   },
                   { 
-                    title: "Risk Assessment Agent", 
-                    desc: "Evaluate loan applications using advanced risk modeling",
+                    title: "Drug Interaction Checker", 
+                    desc: "Identify potential drug interactions and contraindications for medication safety",
                     icon: Shield,
-                    features: ["Credit scoring", "Risk metrics"],
+                    features: ["Drug safety", "Interaction alerts"],
                     status: "Active",
                     gradient: "from-emerald-500 to-teal-600",
                     bgGradient: "from-emerald-50 to-teal-50"
                   },
                   { 
-                    title: "Workflow Optimizer", 
-                    desc: "Streamline approval processes and identify bottlenecks",
+                    title: "Mental Health Counselor", 
+                    desc: "Provide evidence-based mental health support and therapeutic guidance",
                     icon: TrendingUp,
-                    features: ["Process mining", "Automation"],
+                    features: ["Therapy guidance", "Mental wellness"],
                     status: "Active",
                     gradient: "from-purple-500 to-violet-600",
                     bgGradient: "from-purple-50 to-violet-50"
                   },
                   { 
-                    title: "Compliance Monitor", 
-                    desc: "Monitor transactions for regulatory compliance",
+                    title: "Cardiology Specialist", 
+                    desc: "Specialized in cardiovascular conditions and cardiac risk assessment",
                     icon: CheckCircle,
-                    features: ["Real-time scanning", "Alert system"],
+                    features: ["ECG analysis", "Risk assessment"],
                     status: "Coming Soon",
                     gradient: "from-amber-500 to-orange-600",
                     bgGradient: "from-amber-50 to-orange-50"
                   },
                   { 
-                    title: "Market Intelligence", 
-                    desc: "Analyze market trends and generate recommendations",
+                    title: "Emergency Triage Assistant", 
+                    desc: "Rapid assessment and prioritization of emergency cases based on severity",
                     icon: BarChart3,
-                    features: ["Market analysis", "Trend prediction"],
+                    features: ["Triage protocols", "Severity scoring"],
                     status: "Coming Soon",
                     gradient: "from-rose-500 to-pink-600",
                     bgGradient: "from-rose-50 to-pink-50"
                   },
                   { 
-                    title: "Customer Advisor", 
-                    desc: "Provide personalized financial advice using AI",
+                    title: "Patient Care Coordinator", 
+                    desc: "Manage patient workflows and care plan coordination",
                     icon: MessageSquare,
-                    features: ["Natural language", "24/7 availability"],
+                    features: ["Care coordination", "Patient tracking"],
                     status: "Coming Soon",
                     gradient: "from-cyan-500 to-blue-600",
                     bgGradient: "from-cyan-50 to-blue-50"
@@ -561,21 +554,12 @@ export default function ExperimentPage() {
       <section className="relative z-10 py-20 px-6">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="font-medium text-3xl md:text-4xl mb-6">
-            Ready to Transform Your Document Processing?
+            Ready to Build Expert-Level Health AI?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Join leading financial institutions and professional services firms who trust Parsr for their document intelligence needs.
+            Join innovative health-tech startups who trust Med Context for creating intelligent, context-aware medical assistants.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              className="btn-primary bg-gradient-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-              asChild
-            >
-              <Link href="/signup">
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-            </Button>
             <Button 
               variant="outline"
               className="btn-secondary border-2 border-indigo-200 px-8 py-4 rounded-full text-lg font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
@@ -593,7 +577,7 @@ export default function ExperimentPage() {
 
       <footer className="relative z-10 container mx-auto px-6 py-8">
         <div className="text-sm text-gray-500 text-center">
-          © 2025 Parsr. All rights reserved.
+          © 2025 Med Context. All rights reserved.
         </div>
       </footer>
     </div>
