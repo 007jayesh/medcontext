@@ -157,3 +157,222 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Movie/Animation CSS for all the complex Parsr scenes */
+.movie-container {
+  position: relative;
+}
+
+.movie-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Scene animations */
+@keyframes scene-1 {
+  0%, 12% { opacity: 1; z-index: 10; }
+  15%, 100% { opacity: 0; z-index: 1; }
+}
+
+@keyframes scene-2 {
+  0%, 12% { opacity: 0; z-index: 1; }
+  15%, 27% { opacity: 1; z-index: 10; }
+  30%, 100% { opacity: 0; z-index: 1; }
+}
+
+@keyframes scene-3 {
+  0%, 27% { opacity: 0; z-index: 1; }
+  30%, 42% { opacity: 1; z-index: 10; }
+  45%, 100% { opacity: 0; z-index: 1; }
+}
+
+@keyframes scene-4 {
+  0%, 42% { opacity: 0; z-index: 1; }
+  45%, 82% { opacity: 1; z-index: 10; }
+  85%, 100% { opacity: 0; z-index: 1; }
+}
+
+@keyframes scene-5 {
+  0%, 82% { opacity: 0; z-index: 1; }
+  85%, 100% { opacity: 1; z-index: 10; }
+}
+
+.animate-scene-1 { animation: scene-1 12s ease-in-out infinite; }
+.animate-scene-2 { animation: scene-2 12s ease-in-out infinite; }
+.animate-scene-3 { animation: scene-3 12s ease-in-out infinite; }
+.animate-scene-4 { animation: scene-4 12s ease-in-out infinite; }
+.animate-scene-5 { animation: scene-5 12s ease-in-out infinite; }
+
+/* Document upload animations */
+@keyframes document-drop {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes upload-progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+@keyframes pipeline-fetch {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes fetch-progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-document-drop { animation: document-drop 2s ease-in-out infinite; }
+.animate-upload-progress { animation: upload-progress 3s ease-out; }
+.animate-pipeline-fetch { animation: pipeline-fetch 2s ease-in-out infinite; }
+.animate-fetch-progress { animation: fetch-progress 3s ease-out 1s; }
+
+/* AI Processing animations */
+@keyframes ai-process {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+}
+
+@keyframes data-extract {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+.animate-ai-process { animation: ai-process 3s ease-in-out infinite; }
+.animate-data-extract { animation: data-extract 0.8s ease-out forwards; }
+
+/* Database storage animations */
+@keyframes database-store {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes data-card {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+.animate-database-store { animation: database-store 1.5s ease-in-out infinite; }
+.animate-data-card { animation: data-card 0.6s ease-out forwards; }
+
+/* Chat animations */
+@keyframes bot-message {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+@keyframes user-message {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+@keyframes ai-response {
+  0% { opacity: 0; transform: translateX(-30px) scale(0.8); }
+  100% { opacity: 1; transform: translateX(0px) scale(1); }
+}
+
+.animate-bot-message { animation: bot-message 0.8s ease-out forwards; }
+.animate-user-message { animation: user-message 0.8s ease-out forwards; }
+.animate-ai-response { animation: ai-response 1s ease-out forwards; }
+
+/* Agent creation animations */
+@keyframes agent-step-1 {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes agent-step-2 {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+@keyframes agent-step-3 {
+  0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0px) scale(1); }
+}
+
+.animate-agent-step-1 { animation: agent-step-1 0.8s ease-out forwards; }
+.animate-agent-step-2 { animation: agent-step-2 0.8s ease-out forwards; }
+.animate-agent-step-3 { animation: agent-step-3 1s ease-out forwards; }
+
+/* Progress indicators */
+@keyframes progress-dot {
+  0%, 12% { background-color: #6366f1; transform: scale(1); }
+  15%, 100% { background-color: #d1d5db; transform: scale(0.8); }
+}
+
+@keyframes progress-dot-pipeline {
+  0%, 12% { background-color: #d1d5db; transform: scale(0.8); }
+  15%, 27% { background-color: #8b5cf6; transform: scale(1); }
+  30%, 100% { background-color: #d1d5db; transform: scale(0.8); }
+}
+
+@keyframes progress-dot-2 {
+  0%, 27% { background-color: #d1d5db; transform: scale(0.8); }
+  30%, 42% { background-color: #3b82f6; transform: scale(1); }
+  45%, 100% { background-color: #d1d5db; transform: scale(0.8); }
+}
+
+@keyframes progress-dot-3 {
+  0%, 42% { background-color: #d1d5db; transform: scale(0.8); }
+  45%, 57% { background-color: #8b5cf6; transform: scale(1); }
+  60%, 100% { background-color: #d1d5db; transform: scale(0.8); }
+}
+
+@keyframes progress-dot-4 {
+  0%, 57% { background-color: #d1d5db; transform: scale(0.8); }
+  60%, 82% { background-color: #10b981; transform: scale(1); }
+  85%, 100% { background-color: #d1d5db; transform: scale(0.8); }
+}
+
+@keyframes progress-dot-5 {
+  0%, 82% { background-color: #d1d5db; transform: scale(0.8); }
+  85%, 100% { background-color: #f59e0b; transform: scale(1); }
+}
+
+.animate-progress-dot { animation: progress-dot 12s ease-in-out infinite; }
+.animate-progress-dot-pipeline { animation: progress-dot-pipeline 12s ease-in-out infinite; }
+.animate-progress-dot-2 { animation: progress-dot-2 12s ease-in-out infinite; }
+.animate-progress-dot-3 { animation: progress-dot-3 12s ease-in-out infinite; }
+.animate-progress-dot-4 { animation: progress-dot-4 12s ease-in-out infinite; }
+.animate-progress-dot-5 { animation: progress-dot-5 12s ease-in-out infinite; }
+
+/* Feature animations */
+@keyframes fade-in-left {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+@keyframes fade-in-right {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+.animate-fade-in-left { animation: fade-in-left 0.8s ease-out forwards; }
+.animate-fade-in-right { animation: fade-in-right 0.8s ease-out forwards; }
+
+/* Agent carousel */
+@keyframes agent-carousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-agent-carousel {
+  animation: agent-carousel 30s linear infinite;
+}
+
+.agent-card-small {
+  min-width: 320px;
+}
+
+/* Slow spin */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
