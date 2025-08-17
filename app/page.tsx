@@ -82,15 +82,6 @@ export default function ExperimentPage() {
                 Aggregate medical data from multiple sources and APIs, store in structured databases, then fine-tune foundation models on your in-context data. Deploy RAG-enabled chatbots and AI agents that work as virtual employees for your health-tech applications.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
-              <Button 
-                variant="outline"
-                className="btn-secondary border-2 border-indigo-200 px-8 py-3 rounded-full text-sm font-medium text-indigo-600 hover:bg-indigo-600 hover:text-white transition-all duration-300"
-                asChild
-              >
-                <Link href="#contact">Contact Sales</Link>
-              </Button>
-            </div>
           </div>
 
           {/* Right side - Cinematic User Journey */}
