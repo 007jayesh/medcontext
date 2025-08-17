@@ -317,19 +317,18 @@
 
 @keyframes progress-dot-3 {
   0%, 42% { background-color: #d1d5db; transform: scale(0.8); }
-  45%, 57% { background-color: #8b5cf6; transform: scale(1); }
-  60%, 100% { background-color: #d1d5db; transform: scale(0.8); }
+  45%, 82% { background-color: #10b981; transform: scale(1); }
+  85%, 100% { background-color: #d1d5db; transform: scale(0.8); }
 }
 
 @keyframes progress-dot-4 {
-  0%, 57% { background-color: #d1d5db; transform: scale(0.8); }
-  60%, 82% { background-color: #10b981; transform: scale(1); }
-  85%, 100% { background-color: #d1d5db; transform: scale(0.8); }
+  0%, 82% { background-color: #d1d5db; transform: scale(0.8); }
+  85%, 100% { background-color: #f59e0b; transform: scale(1); }
 }
 
 @keyframes progress-dot-5 {
   0%, 82% { background-color: #d1d5db; transform: scale(0.8); }
-  85%, 100% { background-color: #f59e0b; transform: scale(1); }
+  85%, 100% { background-color: #ef4444; transform: scale(1); }
 }
 
 .animate-progress-dot { animation: progress-dot 12s ease-in-out infinite; }

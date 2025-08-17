@@ -79,7 +79,7 @@ export default function ExperimentPage() {
             </div>
             <div className="animate-fade-in-up" style={{animationDelay: '0.6s'}}>
               <p className="text-lg text-gray-600 mb-10">
-                Build specialized medical AI using advanced foundation models with fine-tuning on your expert knowledge base. Our platform combines RAG architecture with context engineering to create clinically-accurate AI assistants for health-tech applications.
+                Aggregate medical data from multiple sources and APIs, store in structured databases, then fine-tune foundation models on your in-context data. Deploy RAG-enabled chatbots and AI agents that work as virtual employees for your health-tech applications.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{animationDelay: '0.8s'}}>
@@ -104,90 +104,107 @@ export default function ExperimentPage() {
               {/* Movie Container */}
               <div className="relative h-96 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700/50 shadow-inner movie-screen">
                 
-                {/* Scene 1: Document Upload & Pipeline Fetch (0-3s) */}
+                {/* Scene 1: Data Aggregation from Multiple Sources (0-3s) */}
                 <div className="absolute inset-0 animate-scene-1">
                   <div className="h-full bg-gradient-to-br from-indigo-50 to-purple-50 flex items-center justify-center">
-                    <div className="flex space-x-12 items-start">
-                      {/* Upload Section */}
-                      <div className="text-center">
-                        <div className="w-16 h-20 bg-white border-2 border-dashed border-indigo-300 rounded-lg flex items-center justify-center mb-4 animate-document-drop">
-                          <FileText className="w-8 h-8 text-indigo-500" />
+                    <div className="flex space-x-8 items-center">
+                      {/* Data Sources */}
+                      <div className="flex flex-col space-y-3">
+                        <div className="text-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-2 animate-document-drop">
+                            <FileText className="w-6 h-6 text-white" />
+                          </div>
+                          <p className="text-xs font-medium text-gray-700">EHR APIs</p>
                         </div>
-                        <p className="text-sm font-medium text-gray-700">patient_medical_record.pdf</p>
-                        <p className="text-xs text-gray-500 mt-1">Uploading to Med Context...</p>
+                        <div className="text-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-2 animate-document-drop" style={{animationDelay: '0.3s'}}>
+                            <BarChart3 className="w-6 h-6 text-white" />
+                          </div>
+                          <p className="text-xs font-medium text-gray-700">Research DBs</p>
+                        </div>
+                        <div className="text-center">
+                          <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-2 animate-document-drop" style={{animationDelay: '0.6s'}}>
+                            <Database className="w-6 h-6 text-white" />
+                          </div>
+                          <p className="text-xs font-medium text-gray-700">Medical APIs</p>
+                        </div>
+                      </div>
+
+                      {/* Arrow and Flow */}
+                      <div className="flex flex-col items-center">
+                        <ArrowRight className="w-8 h-8 text-indigo-400 animate-pulse" />
+                        <div className="text-xs text-gray-500 font-medium mt-2">Aggregating</div>
+                      </div>
+
+                      {/* Collection Hub */}
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mb-4 animate-pipeline-fetch">
+                          <Database className="w-8 h-8 text-white animate-spin-slow" />
+                        </div>
+                        <p className="text-sm font-medium text-gray-700">Data Collection Hub</p>
+                        <p className="text-xs text-gray-500 mt-1">Gathering medical data...</p>
                         <div className="w-32 h-1 bg-gray-200 rounded-full mt-2 mx-auto">
                           <div className="h-full bg-indigo-500 rounded-full animate-upload-progress"></div>
                         </div>
                       </div>
-
-                      {/* Parallel Indicator */}
-                      <div className="flex flex-col items-center mt-8">
-                        <div className="text-xs text-gray-500 font-medium mb-2">Parallel Processing</div>
-                        <div className="flex space-x-2">
-                          <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
-                          <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                          <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                        </div>
-                      </div>
-
-                      {/* Pipeline Fetch Section */}
-                      <div className="text-center">
-                        <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 animate-pipeline-fetch">
-                          <Database className="w-8 h-8 text-white animate-spin-slow" />
-                        </div>
-                        <p className="text-sm font-medium text-gray-700">Fetching medical data</p>
-                        <p className="text-xs text-gray-500 mt-1">RAG processing...</p>
-                        <div className="w-32 h-1 bg-gray-200 rounded-full mt-2 mx-auto">
-                          <div className="h-full bg-purple-500 rounded-full animate-fetch-progress"></div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Scene 2: AI Processing (3-6s) */}
+                {/* Scene 2: Database Storage (3-6s) */}
                 <div className="absolute inset-0 animate-scene-2">
                   <div className="h-full bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4 animate-ai-process">
-                        <Bot className="w-8 h-8 text-white animate-spin-slow" />
-                      </div>
-                      <p className="text-sm font-medium text-gray-700">AI Extracting Medical Data...</p>
-                      <div className="mt-3 space-y-1">
-                        <div className="flex items-center justify-center space-x-2 text-xs">
-                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                          <span className="text-gray-600">Patient: Sarah Johnson</span>
-                        </div>
-                        <div className="flex items-center justify-center space-x-2 text-xs animate-data-extract" style={{animationDelay: '0.5s'}}>
-                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                          <span className="text-gray-600">Diagnosis: Type 2 Diabetes</span>
-                        </div>
-                        <div className="flex items-center justify-center space-x-2 text-xs animate-data-extract" style={{animationDelay: '1s'}}>
-                          <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                          <span className="text-gray-600">HbA1c: 7.2%</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Scene 3: Data Storage (6-8s) */}
-                <div className="absolute inset-0 animate-scene-3">
-                  <div className="h-full bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mb-4 animate-database-store">
                         <Database className="w-8 h-8 text-white" />
                       </div>
-                      <p className="text-sm font-medium text-gray-700">Storing Medical Data</p>
+                      <p className="text-sm font-medium text-gray-700">Storing in Structured Database</p>
                       <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
                         <div className="bg-white/60 backdrop-blur rounded p-2 animate-data-card" style={{animationDelay: '0.2s'}}>
-                          <div className="font-medium text-gray-700">Patient Info</div>
-                          <div className="text-gray-500">✓ Stored</div>
+                          <div className="font-medium text-gray-700">Patient Records</div>
+                          <div className="text-gray-500">✓ 15,420 stored</div>
                         </div>
                         <div className="bg-white/60 backdrop-blur rounded p-2 animate-data-card" style={{animationDelay: '0.4s'}}>
                           <div className="font-medium text-gray-700">Clinical Data</div>
-                          <div className="text-gray-500">✓ Stored</div>
+                          <div className="text-gray-500">✓ 8,934 stored</div>
                         </div>
+                        <div className="bg-white/60 backdrop-blur rounded p-2 animate-data-card" style={{animationDelay: '0.6s'}}>
+                          <div className="font-medium text-gray-700">Research Papers</div>
+                          <div className="text-gray-500">✓ 12,786 stored</div>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur rounded p-2 animate-data-card" style={{animationDelay: '0.8s'}}>
+                          <div className="font-medium text-gray-700">Guidelines</div>
+                          <div className="text-gray-500">✓ 3,542 stored</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Scene 3: Fine-tuning Process (6-8s) */}
+                <div className="absolute inset-0 animate-scene-3">
+                  <div className="h-full bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mb-4 animate-ai-process">
+                        <Zap className="w-8 h-8 text-white animate-spin-slow" />
+                      </div>
+                      <p className="text-sm font-medium text-gray-700">Fine-tuning on In-Context Data</p>
+                      <div className="mt-3 space-y-2">
+                        <div className="flex items-center justify-center space-x-2 text-xs animate-data-extract" style={{animationDelay: '0.2s'}}>
+                          <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                          <span className="text-gray-600">Training on 40,682 medical contexts</span>
+                        </div>
+                        <div className="flex items-center justify-center space-x-2 text-xs animate-data-extract" style={{animationDelay: '0.6s'}}>
+                          <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                          <span className="text-gray-600">Epoch 3/5 • Loss: 0.234</span>
+                        </div>
+                        <div className="flex items-center justify-center space-x-2 text-xs animate-data-extract" style={{animationDelay: '1s'}}>
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                          <span className="text-gray-600">Medical accuracy: 94.7%</span>
+                        </div>
+                      </div>
+                      <div className="w-40 h-2 bg-gray-200 rounded-full mt-3 mx-auto">
+                        <div className="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full animate-upload-progress"></div>
                       </div>
                     </div>
                   </div>
@@ -256,59 +273,73 @@ export default function ExperimentPage() {
                   </div>
                 </div>
 
-                {/* Scene 5: AI Agent Creation Interface (24-30s) */}
+                {/* Scene 5: AI Agents Working as Employees (24-30s) */}
                 <div className="absolute inset-0 animate-scene-5">
                   <div className="h-full bg-gradient-to-br from-emerald-50 to-cyan-50 flex flex-col">
-                    {/* Agent Builder Header */}
+                    {/* Agents Dashboard Header */}
                     <div className="flex items-center p-3 border-b bg-gradient-to-r from-emerald-50 to-cyan-50">
                       <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-cyan-600 rounded-full flex items-center justify-center mr-2">
-                        <Bot className="w-4 h-4 text-white" />
+                        <Users className="w-4 h-4 text-white" />
                       </div>
                       <div>
-                        <div className="text-sm font-medium text-gray-800">AI Agent Builder</div>
-                        <div className="text-xs text-gray-500">Create custom processing workflows</div>
+                        <div className="text-sm font-medium text-gray-800">AI Employees Dashboard</div>
+                        <div className="text-xs text-gray-500">6 agents actively working</div>
                       </div>
                     </div>
                     
-                    {/* Agent Creation Process */}
-                    <div className="flex-1 p-3 space-y-3">
-                      <div className="animate-agent-step-1" style={{animationDelay: '1s'}}>
-                        <div className="bg-white/70 backdrop-blur rounded-lg p-3">
-                          <div className="text-xs font-medium text-gray-700 mb-1">Step 1: Agent Configuration</div>
-                          <div className="text-xs text-gray-600">Name: Clinical Diagnosis Assistant</div>
-                          <div className="text-xs text-gray-600">Database: Medical Knowledge Base</div>
-                        </div>
-                      </div>
-                      
-                      <div className="animate-agent-step-2" style={{animationDelay: '2.5s'}}>
-                        <div className="bg-white/70 backdrop-blur rounded-lg p-3">
-                          <div className="text-xs font-medium text-gray-700 mb-1">Step 2: Objective Definition</div>
-                          <div className="text-xs text-gray-600">✓ Analyze patient symptoms</div>
-                          <div className="text-xs text-gray-600">✓ Suggest differential diagnoses</div>
-                          <div className="text-xs text-gray-600">✓ Recommend treatment options</div>
-                        </div>
-                      </div>
-                      
-                      <div className="animate-agent-step-3" style={{animationDelay: '4s'}}>
-                        <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-lg p-3">
-                          <div className="flex items-center mb-1">
-                            <CheckCircle className="w-3 h-3 text-emerald-600 mr-1" />
-                            <div className="text-xs font-medium text-emerald-800">Agent Created Successfully!</div>
+                    {/* Active Agents Working */}
+                    <div className="flex-1 p-3 space-y-2">
+                      <div className="animate-agent-step-1" style={{animationDelay: '0.5s'}}>
+                        <div className="bg-white/70 backdrop-blur rounded-lg p-2 flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                              <FileText className="w-3 h-3 text-white" />
+                            </div>
+                            <div>
+                              <div className="text-xs font-medium text-gray-700">Dr. AI Smith</div>
+                              <div className="text-xs text-gray-500">Processing 12 diagnoses</div>
+                            </div>
                           </div>
-                          <div className="text-xs text-emerald-700">Ready to assist with clinical diagnoses</div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="animate-agent-step-2" style={{animationDelay: '1s'}}>
+                        <div className="bg-white/70 backdrop-blur rounded-lg p-2 flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center">
+                              <Shield className="w-3 h-3 text-white" />
+                            </div>
+                            <div>
+                              <div className="text-xs font-medium text-gray-700">PharmBot Pro</div>
+                              <div className="text-xs text-gray-500">Checking drug interactions</div>
+                            </div>
+                          </div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                      </div>
+                      
+                      <div className="animate-agent-step-3" style={{animationDelay: '1.5s'}}>
+                        <div className="bg-white/70 backdrop-blur rounded-lg p-2 flex items-center justify-between">
+                          <div className="flex items-center space-x-2">
+                            <div className="w-6 h-6 bg-purple-500 rounded-full flex items-center justify-center">
+                              <TrendingUp className="w-3 h-3 text-white" />
+                            </div>
+                            <div>
+                              <div className="text-xs font-medium text-gray-700">MindCare AI</div>
+                              <div className="text-xs text-gray-500">Supporting 8 patients</div>
+                            </div>
+                          </div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                         </div>
                       </div>
                     </div>
                     
-                    {/* Agent Controls */}
+                    {/* Productivity Stats */}
                     <div className="p-3 border-t bg-gray-50">
-                      <div className="flex items-center justify-between">
-                        <div className="text-xs text-gray-600">Agent status: Active</div>
-                        <div className="flex items-center space-x-2">
-                          <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center">
-                            <ArrowRight className="w-3 h-3 text-white" />
-                          </div>
-                        </div>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-600 mb-1">Daily Productivity</div>
+                        <div className="text-sm font-medium text-emerald-600">847 tasks completed • 99.2% accuracy</div>
                       </div>
                     </div>
                   </div>
@@ -320,27 +351,23 @@ export default function ExperimentPage() {
               <div className="mt-6 flex justify-center space-x-3">
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-indigo-500 rounded-full shadow-lg animate-progress-dot border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">Upload</span>
+                  <span className="text-xs text-gray-600 font-medium">Data Sources</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-purple-500 rounded-full shadow-lg animate-progress-dot-pipeline border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">RAG</span>
+                  <span className="text-xs text-gray-600 font-medium">Database</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-gray-300 rounded-full shadow-lg animate-progress-dot-2 border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">Extract</span>
+                  <span className="text-xs text-gray-600 font-medium">Fine-tune</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-gray-300 rounded-full shadow-lg animate-progress-dot-3 border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">Store</span>
+                  <span className="text-xs text-gray-600 font-medium">RAG Chat</span>
                 </div>
                 <div className="flex flex-col items-center space-y-2">
                   <div className="w-3 h-3 bg-gray-300 rounded-full shadow-lg animate-progress-dot-4 border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">Chat</span>
-                </div>
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-3 h-3 bg-gray-300 rounded-full shadow-lg animate-progress-dot-5 border border-white/30"></div>
-                  <span className="text-xs text-gray-600 font-medium">Agent</span>
+                  <span className="text-xs text-gray-600 font-medium">AI Employees</span>
                 </div>
               </div>
             </div>
